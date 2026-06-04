@@ -1,11 +1,12 @@
 import streamlit as st
 import time
 
-st.tittle()("Visualisasi Sorting")
+st.tittle("Visualisasi Sorting")
 
 #1. Kontrol UI Input Data & Algoritma
 col1, col2 = st.columns(2)
-algo = col1.selectbox("Pilih Algoritma", ["Bubble Sort", "Selection Sort"], ["Insertion Sort"])
+# Perbaikan: Opsi dimasukkan ke dalam satu list yang sama
+algo = col1.selectbox("Pilih Algoritma", ["Bubble Sort", "Selection Sort", "Insertion Sort"])
 user_input = col2.text_input("Input Data (pisahkan koma)", "85, 60, 92, 75, 88")
 
 #2. Keterangan Algoritma Dinamis
